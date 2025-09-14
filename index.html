@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios Web - Conceptos y Aplicaciones</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav>
+    <a href="#" data-target="conceptos">Conceptos</a>
+    <a href="#" data-target="soa">SOA</a>
+    <a href="#" data-target="tipos">Tipos</a>
+    <a href="#" data-target="protocolos">Protocolos</a>
+    <a href="#" data-target="aplicaciones">Aplicaciones</a>
+    <a href="#" data-target="casos">Casos de Estudio</a>
+    <a href="#" data-target="referencias">Referencias</a>
+  </nav>
+
+  <div class="content">
+    <header>
+      <h1>Servicios Web</h1>
+      <p>Conceptos, Arquitectura, Protocolos y Aplicaciones</p>
+    </header>
+
+    <section id="conceptos" class="active">
+      <h2>Definición y conceptos clave de los servicios web</h2>
+      <p>Los servicios web son aplicaciones de software que permiten la comunicación e interoperabilidad entre sistemas diferentes, usando protocolos abiertos como HTTP y formatos estándar como XML o JSON.</p>
+      <p>A diferencia de las APIs tradicionales, los servicios web utilizan estándares específicos (SOAP, REST) para garantizar la compatibilidad entre sistemas distribuidos.</p>
+      <p><strong>Ejemplos cotidianos:</strong> autenticación con Google/Facebook, banca en línea, integración entre aplicaciones móviles y servidores.</p>
+    </section>
+
+    <section id="soa">
+      <h2>Principios de la Arquitectura Orientada a Servicios (SOA)</h2>
+      <p>SOA organiza el software en servicios independientes, reutilizables y de bajo acoplamiento. Estos servicios pueden combinarse para formar aplicaciones más grandes y complejas.</p>
+      <p><strong>Principios clave:</strong> interoperabilidad, bajo acoplamiento, escalabilidad, reutilización.</p>
+      <p><strong>Beneficios:</strong> integración más ágil, reducción de costos, flexibilidad en la evolución de sistemas.</p>
+      <p><strong>Desafíos:</strong> seguridad, gobernanza de servicios, latencia y complejidad en la gestión.</p>
+      <p><strong>Relación con microservicios:</strong> mientras SOA define un marco general, los microservicios son una evolución más ligera y moderna de estos principios.</p>
+    </section>
+
+    <section id="tipos">
+      <h2>Tipos de Servicios Web</h2>
+      <ul>
+        <li><strong>SOAP:</strong> Basado en XML, muy estandarizado, con soporte para transacciones seguras pero más complejo.</li>
+        <li><strong>REST:</strong> Ligero, basado en HTTP, usa JSON o XML, más flexible y ampliamente usado en APIs modernas.</li>
+      </ul>
+      <h3>Comparación SOAP vs REST</h3>
+      <table>
+        <tr><th>Característica</th><th>SOAP</th><th>REST</th></tr>
+        <tr><td>Formato</td><td>XML</td><td>JSON / XML</td></tr>
+        <tr><td>Complejidad</td><td>Alta</td><td>Baja</td></tr>
+        <tr><td>Velocidad</td><td>Más lento</td><td>Más rápido</td></tr>
+        <tr><td>Seguridad</td><td>Alta (WS-Security)</td><td>Depende de HTTPS</td></tr>
+      </table>
+      <h3>Otros modelos emergentes</h3>
+      <ul>
+        <li><strong>GraphQL:</strong> consultas flexibles creadas por Facebook.</li>
+        <li><strong>gRPC:</strong> desarrollado por Google, muy eficiente en microservicios.</li>
+      </ul>
+    </section>
+
+    <section id="protocolos">
+      <h2>Protocolos y Estándares Relacionados</h2>
+      <ul>
+        <li><strong>HTTP/HTTPS:</strong> base de comunicación entre cliente y servidor.</li>
+        <li><strong>XML:</strong> formato de datos estructurado, muy usado en SOAP.</li>
+        <li><strong>JSON:</strong> formato ligero, ideal para REST.</li>
+        <li><strong>WSDL:</strong> describe qué servicios ofrece un sistema (solo para SOAP).</li>
+        <li><strong>UDDI:</strong> directorio empresarial de servicios web.</li>
+      </ul>
+      <h3>Ejemplo de respuesta SOAP</h3>
+      <pre>
+&lt;soap:Envelope&gt;
+  &lt;soap:Body&gt;
+    &lt;getUserResponse&gt;
+      &lt;user&gt;Juan Pérez&lt;/user&gt;
+    &lt;/getUserResponse&gt;
+  &lt;/soap:Body&gt;
+&lt;/soap:Envelope&gt;
+      </pre>
+      <h3>Ejemplo de respuesta REST</h3>
+      <pre>
+{
+  "user": "Juan Pérez"
+}
+      </pre>
+    </section>
+
+    <section id="aplicaciones">
+      <h2>Ejemplos de Aplicaciones</h2>
+      <ul>
+        <li><strong>Finanzas:</strong> pasarelas de pago (PayPal, Stripe), banca digital.</li>
+        <li><strong>Salud:</strong> interoperabilidad en historias clínicas electrónicas y telemedicina.</li>
+        <li><strong>Comercio electrónico:</strong> integración de inventarios y envíos (Amazon, Mercado Libre).</li>
+        <li><strong>Gobierno:</strong> facturación electrónica, trámites en línea, identificación digital.</li>
+        <li><strong>Industria 4.0:</strong> Internet de las Cosas (IoT) y servicios web para automatización.</li>
+      </ul>
+    </section>
+
+    <section id="casos">
+      <h2>Análisis de Casos de Estudio</h2>
+      <ul>
+        <li><strong>Amazon Web Services (AWS):</strong> escalabilidad y APIs REST para almacenamiento, cómputo y bases de datos.</li>
+        <li><strong>Google Maps API:</strong> integración en apps móviles para mostrar ubicaciones.</li>
+        <li><strong>Facebook Graph API:</strong> acceso a información de usuarios y páginas.</li>
+        <li><strong>Gobierno de Estonia:</strong> pionero en gobierno digital con servicios web para trámites ciudadanos.</li>
+      </ul>
+    </section>
+
+    <section id="referencias">
+      <h2>Referencias</h2>
+      <ul>
+        <li>Allamaraju, S. (2010). <em>RESTful Web Services Cookbook</em>. O'Reilly Media.</li>
+        <li>Erl, T. (2005). <em>Web Services: Concepts, Architectures and Applications</em>. Prentice Hall.</li>
+        <li>Erl, T. (2009). <em>SOA Design Patterns</em>. Prentice Hall.</li>
+        <li>Hohpe, G., & Woolf, B. (2003). <em>Enterprise Integration Patterns</em>. Addison-Wesley.</li>
+        <li>Newman, S. (2015). <em>Building Microservices</em>. O'Reilly Media.</li>
+        <li><a href="https://www.restapitutorial.com/" target="_blank">REST API Tutorial</a></li>
+        <li><a href="https://www.tutorialspoint.com/soap/" target="_blank">SOAP Tutorial</a></li>
+        <li><a href="https://www.w3schools.com/xml/xml_services.asp" target="_blank">W3Schools - Web Services</a></li>
+        <li><a href="https://graphql.org/learn/" target="_blank">GraphQL Official Docs</a></li>
+        <li><a href="https://grpc.io/docs/" target="_blank">gRPC Documentation</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Servicios Web | Página de referencia académica</p>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll("nav a").forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        let target = e.target.getAttribute("data-target");
+
+        document.querySelectorAll("section").forEach(sec => {
+          sec.classList.remove("active");
+        });
+
+        document.getElementById(target).classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
